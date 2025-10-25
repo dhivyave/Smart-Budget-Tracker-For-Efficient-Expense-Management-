@@ -1,0 +1,94 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Background */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color:navy;
+  background: linear-gradient(135deg, #4facfe, #00c6fb);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card Container */
+.home-content {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  width: 400px;
+  max-width: 90%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Image */
+.home-img {
+  width: 90px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.home-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.get-started-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4facfe, #00c6fb);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px;
+  box-shadow: 0 4px 15px rgba(0, 198, 251, 0.4);
+}
+
+.get-started-btn:hover {
+  background: linear-gradient(135deg, #00c6fb, #4facfe);
+  transform: scale(1.05);
+}
+
+/* Signup Button (different accent) */
+.signup-btn {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  box-shadow: 0 4px 15px rgba(56, 249, 215, 0.4);
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #38f9d7, #43e97b);
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

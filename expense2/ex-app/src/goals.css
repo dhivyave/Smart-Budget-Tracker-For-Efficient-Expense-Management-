@@ -1,0 +1,214 @@
+/* Goals Page Background */
+.goals-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* Soft finance-green gradient */
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated floating circles in background */
+.goals-page::before,
+.goals-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  animation: float 15s infinite ease-in-out;
+}
+.goals-page::before {
+  width: 250px;
+  height: 250px;
+  top: -80px;
+  left: -80px;
+}
+.goals-page::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -50px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(45deg); }
+}
+
+/* Heading */
+.goals-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a3f4a;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+}
+
+/* Add Goal Form */
+.add-goal-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.add-goal-form input {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-goal-form input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Form Button */
+.add-goal-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #4facfe, #00c6fb);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-goal-form button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,198,251,0.4);
+}
+
+/* Goals List */
+.goals-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Individual Goal Card */
+.goal-card {
+  background: rgba(255,255,255,0.85); /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  padding: 25px 20px;
+  width: 300px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, rotate 0.4s ease;
+  cursor: pointer;
+}
+
+.goal-card:hover {
+  transform: translateY(-10px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.goal-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #1a3f4a;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 12px;
+  height: 14px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  transition: width 0.6s ease;
+  border-radius: 12px;
+}
+
+/* Contribution Box */
+.contribution-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.contribution-box input {
+  width: 110px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-box input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contribution-box button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-box button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(253,160,133,0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .add-goal-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .goals-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .goal-card {
+    width: 85%;
+  }
+}
+.download-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
